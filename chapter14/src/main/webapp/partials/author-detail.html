@@ -1,0 +1,7 @@
+
+    <table class="table authortable">
+        <tr ng-repeat="book in books">
+            <td>{{book.title}}</td>
+            <a class="btn btn-primary" ui-sref="viewAuthor({id:author.id})">View</a>
+        </tr>
+    </table>

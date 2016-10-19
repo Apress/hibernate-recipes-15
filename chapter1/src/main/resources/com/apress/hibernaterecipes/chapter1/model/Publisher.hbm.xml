@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.apress.hibernaterecipes.chapter1.model.Publisher" table="PUBLISHER" lazy="false">
+        <id name="code">
+            <column name="CODE" sql-type="varchar(6)" not-null="true"/>
+        </id>
+        <property name="name">
+            <column name="NAME" sql-type="varchar(64)" not-null="true"/>
+        </property>
+        <property name="address">
+            <column name="ADDRESS" sql-type="varchar(128)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

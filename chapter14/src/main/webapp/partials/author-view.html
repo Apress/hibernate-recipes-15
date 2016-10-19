@@ -1,0 +1,41 @@
+<table class="table authortable">
+    <tr>
+        <td><h3>Details for {{author.title}}</h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{author.name}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="editAuthor({id:author.id})">Edit</a>
+</div>
+
+<div>
+    <table class="table authortable">
+        <tr>
+            <td><h3>Title</h3></td>
+            <td><h3>Edition</h3></td>
+            <td><h3>Copies Sold</h3></td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="book in books">
+            <td>
+                {{book.title}}
+            </td>
+            <td>
+                {{book.edition}}
+            </td>
+            <td>
+                {{book.copiesSold}}
+            </td>
+            <td>
+                <a class="btn btn-info" ui-sref="editBook({id:author.id, bid:book.id})">Edit</a>
+                <a class="btn btn-danger" ng-click="deleteBook(author, book)">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <a class="btn btn-danger" ui-sref="newBook(author)">Add Book</a>
+
+</div>

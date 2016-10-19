@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.apress.hibernaterecipes.chapter6.recipe2.Book2IdBag">
+        <id name="id" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(64)" not-null="true" unique="true"/>
+        </property>
+        <idbag name="reviews">
+            <collection-id column="review_id" type="int">
+                <generator class="seqhilo"/>
+            </collection-id>
+            <key column="book_id"/>
+            <element type="string" column="review" not-null="true"/>
+        </idbag>
+    </class>
+</hibernate-mapping>

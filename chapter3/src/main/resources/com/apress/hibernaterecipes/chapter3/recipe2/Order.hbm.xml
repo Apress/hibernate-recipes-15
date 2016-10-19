@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.apress.hibernaterecipes.chapter3.recipe2">
+    <class name="Order" table="NestedOrder">
+        <id name="id" type="long" column="ID">
+            <generator class="native"/>
+        </id>
+        <component name="weekdayContact" class="Contact">
+            <property name="name" column="weekday_name"/>
+            <property name="address" column="weekday_address"/>
+            <component name="phone" class="Phone">
+                <property name="areaCode" column="weekday_area_code"/>
+                <property name="exchange" column="weekday_exchange"/>
+                <property name="number" column="weekday_number"/>
+            </component>
+        </component>
+        <component name="holidayContact" class="Contact">
+            <property name="name" column="holiday_name"/>
+            <property name="address" column="holiday_address"/>
+            <component name="phone" class="Phone">
+                <property name="areaCode" column="holiday_area_code"/>
+                <property name="exchange" column="holiday_exchange"/>
+                <property name="number" column="holiday_number"/>
+            </component>
+        </component>
+    </class>
+</hibernate-mapping>

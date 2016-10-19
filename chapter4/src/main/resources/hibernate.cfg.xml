@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:file:./chapter4;write_delay=false</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.discriminator.ignore_explicit_for_joined">true</property>
+        
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe1.Disc"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe1.AudioDisc"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe1.VideoDisc"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe2.Disc2"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe2.AudioDisc2"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe2.VideoDisc2"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe3.Disc3"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe3.AudioDisc3"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe3.VideoDisc3"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe4.Disc4"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe4.AudioDisc4"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe4.VideoDisc4"/>
+        <mapping class="com.apress.hibernaterecipes.chapter4.model.recipe5.Address"/>
+    </session-factory>
+</hibernate-configuration>
