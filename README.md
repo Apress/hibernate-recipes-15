@@ -1,4 +1,4 @@
-#Apress Source Code
+# Apress Source Code
 
 This repository accompanies [*Hibernate Recipes*](http://www.apress.com/9781484201282) by Gary Mak, Srinivas Guruzu, and Joseph Ottinger (Apress, 2015).
 
@@ -6,10 +6,10 @@ This repository accompanies [*Hibernate Recipes*](http://www.apress.com/97814842
 
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
 
-##Releases
+## Releases
 
 Release v1.0 corresponds to the code in the published book, without corrections or updates.
 
-##Contributions
+## Contributions
 
 See the file Contributing.md for more information on how you can contribute to this repository.
